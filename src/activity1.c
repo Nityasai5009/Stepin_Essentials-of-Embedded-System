@@ -1,9 +1,9 @@
 /**
  * @file activity1.c
- * @author KaaviyaP (kaaviya2881999@gmail.com)
+ * @author Nityasai5009
  * @brief User defined utilities, to define pins and ports to Blink an LED ON/OFF 
  * @version 0.1
- * @date 2021-04-27
+ * @date 2021-09-16
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -15,10 +15,11 @@
 void peripheral_init(void)
 {	
 	DDRD |= (1<<PD2); // set PD2=1 for LED
+	 DDRD &= ~(1<<PD1); //clear bit
+    PORTD |= (1<<PD1); //set bit PD0 for HeaterSwitch
     DDRD &= ~(1<<PD0); //clear bit
     PORTD |= (1<<PD0); //set bit PD0 for SeatSwitch
-    DDRD &= ~(1<<PD1); //clear bit
-    PORTD |= (1<<PD1); //set bit PD0 for HeaterSwitch
+    
 }
 
 void TurnLED_ON(){
