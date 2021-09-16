@@ -23,4 +23,4 @@
 
 |Codacy|codacy|
 |:--:|:--:|
-|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|![codacyGrade]([![Codacy Badge](https://app.codacy.com/project/badge/Grade/d43c51df0d314e99863880ba9fd1c73b)](https://www.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nityasai5009/Stepin_Essentials-of-Embedded-System&amp;utm_campaign=Badge_Grade))|
+|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|([![Codacy Badge](https://app.codacy.com/project/badge/Grade/d43c51df0d314e99863880ba9fd1c73b)](https://www.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nityasai5009/Stepin_Essentials-of-Embedded-System&amp;utm_campaign=Badge_Grade))|
