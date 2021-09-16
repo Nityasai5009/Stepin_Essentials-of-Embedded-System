@@ -24,5 +24,4 @@
 |Build|Cppcheck|Codacy|
 |:--:|:--:|:--:|
 |[![Compile-Linux](https://github.com/KaaviyaP/EmbeddedC_255944/actions/workflows/Compile.yml/badge.svg)](https://github.com/KaaviyaP/EmbeddedC_255944/actions/workflows/Compile.yml)|[![Cppcheck](https://github.com/KaaviyaP/EmbeddedC_255944/actions/workflows/CodeQulaity.yml/badge.svg)](https://github.com/KaaviyaP/EmbeddedC_255944/actions/workflows/CodeQulaity.yml)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e266b3e9afb5440aa83ddbeb4ac95dbe)](https://www.codacy.com/gh/KaaviyaP/EmbeddedC_255944/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KaaviyaP/EmbeddedC_255944&amp;utm_campaign=Badge_Grade)|<a href="https://frontend.code-inspector.com/public/user/github/Nityasai5009">
-   <img src="https://code-inspector.com/public/badge/user/github/Nityasai5009?style=light" alt="code inspector badge" />
-</a>
+  
