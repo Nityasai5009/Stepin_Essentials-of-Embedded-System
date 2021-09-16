@@ -1,4 +1,7 @@
 # Stepin_Essentials-of-Embedded-System
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2b4d134138f044dcaaf1ac3e18d73f95)](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System?utm_source=github.com&utm_medium=referral&utm_content=Nityasai5009/Stepin_Essentials-of-Embedded-System&utm_campaign=Badge_Grade_Settings)
+
 ## Activity-1 In Action
 
 |OFF|OFF|ON|OFF|
