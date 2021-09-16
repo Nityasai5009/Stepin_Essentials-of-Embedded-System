@@ -10,8 +10,6 @@
  */
 
 #include "activity1.h"
-
-
 void peripheral_init(void)
 {	
 	DDRD |= (1<<PD2); // set PD2=1 for LED
