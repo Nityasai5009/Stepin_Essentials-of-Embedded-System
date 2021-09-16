@@ -8,10 +8,8 @@
  * @copyright Copyright (c) 2021
  * 
  */
-
 #include "activity3.h"
 #include "activity2.h"
-
 void InitTimer()
 {
     TCCR1A |= (1<<COM1A1)|(1<<WGM11)|(1<<WGM10);
@@ -22,7 +20,8 @@ void InitTimer()
 void activity3_PWM(uint16_t temp)
 {
     InitTimer();
-    if(temp>=0 && temp<=200){
+    if(temp>=0 && temp<=200)
+        {
             OCR1A = PWM_20_PERCENT;
             _delay_ms(200);
         }
@@ -38,7 +37,8 @@ void activity3_PWM(uint16_t temp)
              OCR1A = PWM_95_PERCENT;
             _delay_ms(200);
         }
-        else{
+        else
+        {
             OCR1A=0;
             _delay_ms(200);
         }
