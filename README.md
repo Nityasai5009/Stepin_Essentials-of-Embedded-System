@@ -23,4 +23,4 @@
 
 |Codacy|codacy|
 |:--:|:--:|
-|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|![codacyGRADE](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|
+|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|![codacyGrade](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|
