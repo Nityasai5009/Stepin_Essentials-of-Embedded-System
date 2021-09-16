@@ -16,18 +16,18 @@
  * Macro Definitions
  */
 
-#define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
-#define LED_PORT (PORTD)    /**< LED Port Number */
-#define LED_PIN  (PORTD2)   /**< LED Pin number  */
+#define F_CPU 16000000UL 	    /**< Clock Frequency of MCU is 16 MHz */
+  #define LED_PIN  (PORTD2)   /**< LED Pin number  */
+#define LED_PORT (PORTD)      /**< LED Port Number */
+#define TEMP_SENSOR  (PORTD1)    /**< Port for Temperature Sensor   */
+
 #define BUTTON_SENSOR  (PORTD0)   /**< Port for Button Sensor  */
-#define TEMP_SENSOR  (PORTD1)   /**< Port for Temperature Sensor   */
 
 /**
  * Include files
  */ 
 #include <util/delay.h>
 #include <avr/io.h>
-
 
 /**
  * Function Definitions
