@@ -1,5 +1,4 @@
 <circuit reactStep="50" animate="0" noLinAcc="5" type="simulide_0.1" speed="1000000" noLinStep="10">
- 
 Ground-53: 
 <item labelx="-16" id="Ground-53" x="-52" labely="-24" objectName="Ground-53" labelrot="0" y="-164" rotation="0" valLabRot="0" vflip="1" Show_id="false" valLabelx="0" hflip="1" itemtype="Ground" valLabely="0"/>
  
@@ -80,5 +79,4 @@ PlotterWidget-34:
  
 SerialPortWidget-35: 
 <item maximized="false" sizeHint="" whatsThis="" toolTipDuration="-1" inputMethodHints="0" width="313" size="" acceptDrops="false" statusTip="" rect="" frameSize="" frameGeometry="" minimized="false" palette="" layoutDirection="0" contextMenuPolicy="1" windowOpacity="1" sizeIncrement="" windowTitle="Settings" modal="false" styleSheet="" maximumSize="" sizePolicy="" focusPolicy="0" childrenRegion="" maximumWidth="450" pos="" windowModality="0" minimumSize="" childrenRect="" minimumHeight="0" fullScreen="false" minimumWidth="0" itemtype="SerialPort" baseSize="" autoFillBackground="false" windowFilePath="" windowIcon="" focus="false" mouseTracking="false" windowIconText="" x="0" enabled="true" font="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0" toolTip="" isActiveWindow="true" SettingsProp=",0,3,0,0,0" geometry="" windowModified="false" accessibleName="" locale="" y="0" minimumSizeHint="" normalGeometry="" height="141" visible="false" updatesEnabled="true" maximumHeight="170" objectName="SerialPortWidget-35" accessibleDescription="" cursor=""/>
- 
 </circuit>
