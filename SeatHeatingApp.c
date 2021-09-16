@@ -25,9 +25,6 @@ int main(void)
             TurnLED_ON();//Turn LED ON
             temp=activity2_GetADC(); //Get the ADC value
             activity3_PWM(temp); //PWM output based on temperature
-		    activity4_USARTWrite(temp); //To Serial monitor to print Temperature
-            
-
         }
         else  //in all other cases
         {
