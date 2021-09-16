@@ -2,9 +2,9 @@
 
 ## Activity-1 In Action
 
-|OFF|OFF|OFF|ON|
+|OFF|OFF|ON|OFF|
 |:--:|:--:|:--:|:--:|
-|![OFF](https://user-images.githubusercontent.com/80662569/116460814-1e747f00-a885-11eb-9361-7d70ba90e82d.PNG) |![OFF](https://user-images.githubusercontent.com/80662569/116460808-1c122500-a885-11eb-8023-4ab0ec876fa6.PNG)|![OFF](https://user-images.githubusercontent.com/80662569/116460810-1ddbe880-a885-11eb-9460-5a43f89de00e.PNG)|![ON](https://user-images.githubusercontent.com/80662569/116460813-1ddbe880-a885-11eb-90f1-d0da5705cd19.PNG)|
+|![OFF](https://user-images.githubusercontent.com/80662569/116460814-1e747f00-a885-11eb-9361-7d70ba90e82d.PNG) |![OFF](https://user-images.githubusercontent.com/80662569/116460808-1c122500-a885-11eb-8023-4ab0ec876fa6.PNG)|![ON](https://user-images.githubusercontent.com/80662569/116460813-1ddbe880-a885-11eb-90f1-d0da5705cd19.PNG)|![OFF](https://user-images.githubusercontent.com/80662569/116460810-1ddbe880-a885-11eb-9460-5a43f89de00e.PNG)
 
 ## Activity 1 Code 
 ```
@@ -124,104 +124,3 @@ void activity3_PWM(uint16_t temp)
 
 ```
 
-## Activity-4 In Action
-
-|20 DEGREES|25 DEGREES|
-|:--:|:--:|
-|![20](https://user-images.githubusercontent.com/80662569/116462498-20d7d880-a887-11eb-827d-3c4601f65f82.PNG) |![25](https://user-images.githubusercontent.com/80662569/116462506-22a19c00-a887-11eb-9f96-e03d69035c7e.PNG)|
-|29 DEGREES|33 DEGREES|
-|![29](https://user-images.githubusercontent.com/80662569/116462509-233a3280-a887-11eb-9b8f-c925bc36cdcd.PNG)|![33](https://user-images.githubusercontent.com/80662569/116462511-233a3280-a887-11eb-91a9-a11098dc7529.PNG)|
-
-## Activity 4 Code 
-```
-void USARTInit()
-{
-    UBRR0H = (uint8_t)(UBRR_VALUE>>8);
-    UBRR0L = (uint8_t)UBRR_VALUE;
-    UCSR0C=(1<<UMSEL00)|(1<<UCSZ01)|(1<<UCSZ00);
-    UCSR0B=(1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0)|(1<<TXCIE0);
-}
-
-int USARTRead()
-{
-    while(!(UCSR0A &(1<<RXC0)))
-    {
-        //Do nothing
-    }
-    return UDR0;
-}
-
-void USARTInit()
-{
-    UBRR0H = (uint8_t)(UBRR_VALUE>>8);
-    UBRR0L = (uint8_t)UBRR_VALUE;
-    UCSR0C=(1<<UMSEL00)|(1<<UCSZ01)|(1<<UCSZ00);
-    UCSR0B=(1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0)|(1<<TXCIE0);
-}
-
-int USARTRead()
-{
-    while(!(UCSR0A &(1<<RXC0)))
-    {
-        //Do nothing
-    }
-    return UDR0;
-}
-
-void activity4_USARTWrite(uint16_t temp)
-{ 
-    int i=0;
-        if(temp>=0 && temp<=200){
-            unsigned char data1[]="Temperature: 20 degree C\n";
-            i=0;
-            while(data1[i]!=0){
-            while (!( UCSR0A & (1<<UDRE0)));  // Wait for empty transmit buffer
-            UDR0 = data1[i];        // Put data into buffer, sends the data
-            i++;
-            }
-            _delay_ms(2000);
-        }
-        else if(temp>=210 && temp<=500){
-            unsigned char data2[]="Temperature: 25 degree C\n";
-            i=0;
-            while(data2[i]!=0){
-            while (!( UCSR0A & (1<<UDRE0)));  // Wait for empty transmit buffer
-            UDR0 = data2[i];        // Put data into buffer, sends the data
-            i++;
-            }
-            _delay_ms(2000);
-        }
-        else if(temp>=510 && temp<=700){        
-             unsigned char data3[]="Temperature: 29 degree C\n";
-            i=0;
-            while(data3[i]!=0){
-            while (!( UCSR0A & (1<<UDRE0)));  // Wait for empty transmit buffer
-            UDR0 = data3[i];        // Put data into buffer, sends the data
-            i++;
-            }
-            _delay_ms(2000);
-        }
-        else if(temp>=710 && temp<=1024){         
-            unsigned char data4[]="Temperature: 33 degree C\n";     
-            i=0;
-            while(data4[i]!=0){
-            while (!( UCSR0A & (1<<UDRE0)));  // Wait for empty transmit buffer
-            UDR0 = data4[i];        // Put data into buffer, sends the data
-            i++;
-            }
-            _delay_ms(2000);
-        }
-        else{
-              unsigned char data5[]="Temperature: 0 degree C\n";
-            i=0;
-            while(data5[i]!=0){
-            while (!( UCSR0A & (1<<UDRE0)));  // Wait for empty transmit buffer
-            UDR0 = data5[i];        // Put data into buffer, sends the data
-            i++;
-            }
-            _delay_ms(2000);
-            
-        }
-}
-  
-```
