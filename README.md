@@ -21,6 +21,6 @@
 
 ### CI and Code Quality
 
-|Codacy|
-|:--:|
-|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)| 
+|Codacy|Codacy|
+|:--:|:--:|
+|![Codacy](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|![GRADE](https://app.codacy.com/gh/Nityasai5009/Stepin_Essentials-of-Embedded-System/dashboard)|
