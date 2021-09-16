@@ -1,4 +1,4 @@
-<circuit noLinAcc="5" type="simulide_0.1" noLinStep="10" speed="1000000" reactStep="50" animate="0">
+<circuit noLinAcc="5" noLinStep="10" speed="1000000" type="simulide_0.1" reactStep="50" animate="0">
  
 Node-29: 
 <item objectName="Node-29" x="-644" valLabely="0" id="Node-29" y="-284" vflip="1" rotation="0" labely="-24" valLabRot="0" labelrot="0" itemtype="Node" Show_id="false" hflip="1" labelx="-16" valLabelx="0"/>
