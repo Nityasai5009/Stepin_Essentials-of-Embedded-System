@@ -8,36 +8,32 @@ src/activity3.c\
 
 #Object copy to create hexfile
 OBJCOPY = avr-objcopy.exe
-
 #Avrdude
 AVRDUDE := avrdude
-
 #Options for HEX file generation
 HFLAGS = -j .text -j .data -O ihex
-
 # All header file paths
 INC = -I inc
-
 # Find out the OS and configure the variables accordingly
 ifdef OS	# All configurations for Windwos OS
-   # Delete command 
-   RM = del /q
-   # Correct the path based on OS
-   FixPath = $(subst /,\,$1)
    # Name of the compiler used
    CC = avr-gcc.exe
+   # Correct the path based on OS
+   FixPath = $(subst /,\,$1)
    # Name of the elf to hex file converter used
    AVR_OBJ_CPY = avr-objcopy.exe
+   # Delete command 
+   RM = del /q
 else #All configurations for Linux OS
    ifeq ($(shell uname), Linux)
    	  # Delete command
       RM = rm -rf				
 	  # Correct the path based on OS
       FixPath = $1				
-	  # Name of the compiler used
-	  CC = avr-gcc
 	  # Name of the elf to hex file converter used
 	  AVR_OBJ_CPY = avr-objcopy 
+	  # Name of the compiler used
+	  CC = avr-gcc
    endif
 endif
 
@@ -51,15 +47,7 @@ all:$(BUILD_DIR)
 hex: $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
 	#create hex file
 	$(OBJCOPY) $(HFLAGS) $< $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).hex)
-
-$(BUILD_DIR):
-	# Create directory to store the built files
-	mkdir $(BUILD_DIR)
-
-analysis: $(SRC)
-	#Analyse the code using Cppcheck command line utility
-	cppcheck --enable=all $^
-
+	
 doc:
 	#Build the code code documentation using Doxygen command line utility
 	make -C documentation
@@ -69,3 +57,11 @@ clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	make -C documentation clean
 	rmdir $(BUILD_DIR)
+$(BUILD_DIR):
+	# Create directory to store the built files
+	mkdir $(BUILD_DIR)
+
+analysis: $(SRC)
+	#Analyse the code using Cppcheck command line utility
+	cppcheck --enable=all $^
+
