@@ -1,7 +1,5 @@
 PROJ_NAME = SeatHeatApp
-
 BUILD_DIR = Build
-
 # All Source code files
 SRC = SeatHeatingApp.c\
 src/activity1.c\
