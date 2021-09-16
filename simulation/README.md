@@ -2,9 +2,11 @@
 
 ## Activity-1 In Action
 
-|OFF|OFF|ON|OFF|
-|:--:|:--:|:--:|:--:|
-|![OFF](https://user-images.githubusercontent.com/80662569/116460814-1e747f00-a885-11eb-9361-7d70ba90e82d.PNG) |![OFF](https://user-images.githubusercontent.com/80662569/116460808-1c122500-a885-11eb-8023-4ab0ec876fa6.PNG)|![ON](https://user-images.githubusercontent.com/80662569/116460813-1ddbe880-a885-11eb-90f1-d0da5705cd19.PNG)|![OFF](https://user-images.githubusercontent.com/80662569/116460810-1ddbe880-a885-11eb-9460-5a43f89de00e.PNG)
+|OFF|OFF|ON|
+|:--:|:--:|:--:|
+|![OFF](https://user-images.githubusercontent.com/80662569/116460814-1e747f00-a885-11eb-9361-7d70ba90e82d.PNG) |![OFF](https://user-images.githubusercontent.com/80662569/116460808-1c122500-a885-11eb-8023-4ab0ec876fa6.PNG)|![ON](https://user-images.githubusercontent.com/80662569/116460813-1ddbe880-a885-11eb-90f1-d0da5705cd19.PNG)|
+|OFF|
+|![OFF](https://user-images.githubusercontent.com/80662569/116460810-1ddbe880-a885-11eb-9460-5a43f89de00e.PNG)
 
 ## Activity 1 Code 
 ```
@@ -16,20 +18,17 @@ void peripheral_init(void)
     DDRD &= ~(1<<PD1); //clear bit
     PORTD |= (1<<PD1); //set bit PD0 for HeaterSwitch
 }
-
 void TurnLED_ON(){
     LED_PORT |= (1<<LED_PIN); 
 }
-
 void TurnLED_OFF(){
     LED_PORT &= ~(1<<LED_PIN);
 }
-
 int act1=0;
 int activity1_LED(void)
 {
        peripheral_init();
-        if(!(PIND&(1<<BUTTON_SENSOR )) && !(PIND&(1<<TEMP_SENSOR))) //both the switches are pressed
+        if(!(PIND&(1<<TEMP_SENSOR )) && !(PIND&(1<<BUTTON_SENSOR))) //both the switches are pressed
         { 
             act1=1;
         }
@@ -54,9 +53,8 @@ int activity1_LED(void)
 void InitADC()
 {
     ADMUX=(1<<REFS0);
-    ADCSRA= (1<<ADEN)|(7<<ADPS0);
+    ADCSRA= (7<<ADPS0)|(1<<ADEN);
 }
-
 uint16_t ReadADC(uint8_t ch)
 {
     ADMUX&=0xf8;
@@ -66,9 +64,9 @@ uint16_t ReadADC(uint8_t ch)
     ADCSRA|=(1<<ADSC);
     while(!(ADCSRA & (1<<ADIF)));
     ADCSRA|=(1<<ADIF);
+    
     return(ADC);
 }
-
 uint16_t activity2_GetADC(void)
 {
       InitADC();
