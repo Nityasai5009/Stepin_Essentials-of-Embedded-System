@@ -1,7 +1,6 @@
 #ifndef __ACTIVITY_2_H__
 #define __ACTIVITY_2_H__
 
-
 /**
  * @file activity2.h
  * @author Nityasai5009
@@ -19,7 +18,6 @@
  
 #include <util/delay.h>
 #include <avr/io.h>
-
 
 /**
  * Function Definitions
